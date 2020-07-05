@@ -6,6 +6,10 @@ const cartSchema = new mongoose.Schema({
         required: true,
         min: 6,
     },
+    product_id: {
+        type: String,
+        required: true,
+    },
     product_name: {
         type: String,
         required: true,
@@ -13,14 +17,12 @@ const cartSchema = new mongoose.Schema({
         min: 6,
     },
     price: {
-        type: Float32Array,
+        type: Number,
         required: true,
-        default: 0.00
     },
     count: {
-        type: Int32Array,
+        type: Number,
         required: true,
-        default: 1
     }
 });
 

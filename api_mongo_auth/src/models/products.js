@@ -30,7 +30,7 @@ const productsSchema = new mongoose.Schema({
     stock: {
         type: Number,
         required: false,
-        default: 0
+        default: 1
     },
     create_date: {
         type: Date,

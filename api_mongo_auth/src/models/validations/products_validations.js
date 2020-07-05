@@ -14,9 +14,9 @@ const registerValidation = async (body) => {
 
 const updateValidation = async (body) => {
     const schema = Joi.object().keys({
-        id: Joi.string().required(),// id from database (unique product id)
+        image_url: Joi.string(),
         name: Joi.string().min(6).max(255).required(),
-        description: Joi.number().min(10).max(1024).required(),
+        description: Joi.string().min(10).max(1024).required(),
         price: Joi.number().required(),
         stock: Joi.number().required(),
     });
